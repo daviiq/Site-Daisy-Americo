@@ -1,0 +1,161 @@
+:where(:root) {
+    background-color: #FFFAEB;
+  }
+
+  body {
+    background-color: #FFFAEB;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  /* ================= HEADER ================= */
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-content {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3rem;
+    box-sizing: border-box;
+  }
+
+  .brand a {
+    font-size: 25px;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+  }
+
+  nav {
+    display: flex;
+    gap: 3rem;
+  }
+
+  nav a {
+    color: #000;
+    font-size: 20px;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+  }
+
+  nav a:hover {
+    transform: scale(1.1);
+  }
+
+  .menu-bar {
+    width: 100%;
+    height: 5px;
+    background-color: #dce0e6;
+  }
+
+  /* ================= CONTEÚDO ================= */
+
+  main.container {
+    margin-top: 120px;
+    padding: 2rem 3rem;
+    max-width: 1200px;
+  }
+
+  .outro {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .outro img {
+    width: 100%;
+    border-radius: 18px;
+    object-fit: cover;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  }
+
+  .info h1 {
+    margin-top: 0;
+    font-size: 2rem;
+    color: #000;
+  }
+
+  .info p {
+    font-size: 1.05rem;
+    margin: 0.5rem 0;
+    color: #333;
+  }
+
+  .status {
+    margin: 1rem 0;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+  .disponivel {
+    color: #2e7d32;
+  }
+
+  .indisponivel {
+    color: #c62828;
+  }
+
+  .acoes {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .acoes a[role="button"] {
+    font-size: 1.05rem;
+  }
+
+  /* ================= RESPONSIVO ================= */
+
+  @media (max-width: 900px) {
+    .outro {
+      grid-template-columns: 1fr;
+    }
+  }
+  /* ================= RESPONSIVO DO MENU ================= */
+
+/* Tela média: até 1200px de largura */
+@media (max-width: 1200px) {
+nav {
+  gap: 1rem;          /* reduz o espaço entre os links, evitando que fiquem muito afastados */
+}
+
+nav a {
+  font-size: 20px;    /* mantém os links legíveis, sem ficarem grandes demais */
+}
+
+.brand a {
+  font-size: 26px;    /* aumenta levemente o logo para compensar redução de espaço do menu */
+}
+}
+
+/* Tela pequena: até 768px de largura */
+@media (max-width: 768px) {
+/* Ajuste do conteúdo interno do header */
+.header-content {
+  flex-direction: column;      /* empilha logo e menu verticalmente */
+  align-items: flex-start;     /* alinha conteúdo à esquerda */
+  gap: 1rem;                   /* espaçamento entre logo e menu */
+  height: auto;                /* altura automática para se ajustar ao conteúdo */
+  padding: 1rem 1.5rem;        /* padding reduzido para caber em telas pequenas */
+}
+
+/* Ajuste do menu */
+nav {
+  width: 100%;                 /* menu ocupa toda a largura disponível */
+  justify-content: space-between; /* espaça os links igualmente horizontalmente */
+}
+}

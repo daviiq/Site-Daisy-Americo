@@ -1,0 +1,171 @@
+:where(:root) {
+    background-color: #FFFAEB;
+  }
+
+  body {
+    background-color: #FFFAEB;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  header {
+    position: fixed;             /* mantém o header fixo no topo da página */
+    top: 0;
+    left: 0;
+    width: 100%;                 /* ocupa toda a largura */
+    background-color: #ffffff;   /* cor de fundo do header */
+    box-sizing: border-box;      /* inclui padding e border na largura */
+    z-index: 1000;               /* fica acima de outros elementos */
+    display: flex;               /* usa flexbox para alinhar conteúdo */
+    flex-direction: column;      /* empilha elementos verticalmente (logo e barra) */
+  }
+
+  /* ================= HEADER CONTENT ================= */
+  .header-content {
+    display: flex;               /* flex horizontal para logo e nav */
+    justify-content: space-between; /* espaço entre logo e menu */
+    align-items: center;         /* centraliza verticalmente */
+    padding: 1rem 3rem;          /* espaçamento interno horizontal e vertical */
+    box-sizing: border-box;      /* padding incluído na largura */
+  }
+
+  /* ================= LOGO ================= */
+  .brand a {
+    font-size: 25px;             /* tamanho do logo */
+    font-weight: bold;           /* negrito */
+    color: #000;                 /* cor preta */
+    text-decoration: none;       /* sem underline */
+    white-space: nowrap;         /* evita quebra de linha */
+  }
+
+  /* ================= MENU ================= */
+  nav {
+    display: flex;               /* links em linha */
+    gap: 3rem;                   /* espaço entre cada link */
+  }
+
+  nav a {
+    color: #000;                 /* cor do link */
+    font-size: 20px;             /* tamanho da fonte */
+    text-decoration: none;       /* remove underline */
+    transition: transform 0.2s ease; /* animação suave ao passar mouse */
+    white-space: nowrap;         /* evita quebra de linha */
+  }
+
+  nav a:hover {
+    transform: scale(1.1);       /* aumenta levemente o link ao passar mouse */
+  }
+
+  /* ================= BARRA DECORATIVA ================= */
+  .menu-bar {
+    width: 100%;                 /* ocupa toda largura do header */
+    height: 5px;                 /* altura da barra */
+    background-color: #dce0e6;   /* cor cinza clara */
+  }
+
+  /* ================= RESPONSIVO ================= */
+
+  /* Tela média/larga (até 1200px) */
+  @media (max-width: 1200px) {
+    nav {
+      gap: 1rem;               /* reduz espaço entre links para telas médias */
+    }
+
+    nav a {
+      font-size: 18px;         /* mantém legível, mas menor */
+    }
+
+    .brand a {
+      font-size: 24px;         /* ajusta tamanho do logo */
+    }
+  }
+
+  /* Tela pequena/móvel (até 768px) */
+  @media (max-width: 768px) {
+    /* Header empilha logo e menu verticalmente */
+    .header-content {
+      flex-direction: column;    /* empilha verticalmente */
+      align-items: flex-start;   /* alinha à esquerda */
+      gap: 1rem;                 /* espaçamento entre logo e menu */
+      padding: 1rem 1.5rem;      /* padding reduzido para celular */
+    }
+
+    /* Menu ocupa toda largura */
+    nav {
+      width: 100%;               /* menu com largura total */
+      justify-content: space-between; /* espaça links igualmente */
+    }
+
+    nav a {
+      font-size: 18px;           /* fonte menor para caber na tela */
+    }
+  }
+
+  main.container {
+    margin-top: 15px;
+    padding: 2rem 3rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    column-gap: 4rem; /* distância horizontal */
+    row-gap: 0px; /* controla a distância vertical */
+    align-content: start;
+    align-items: start;
+  }
+
+  /* Card visual do quadro */
+  .card-caneca {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+    padding-bottom: 0px; padding-top: 10px;
+    cursor: pointer; /* indica que é clicável */
+    margin-bottom: 0; /* garante que não haja margem extra */
+  }
+
+  .card-caneca:hover {
+    transform: translateY(-4px);
+  }
+
+  .card-caneca img {
+    display: block; /* remove gap fantasma */
+    aspect-ratio: auto; /* mantém a proporção natural da imagem */
+    max-height: 250px;  /* limita a altura para não esticar tanto */
+    width: 100%;
+    object-fit: cover;
+    transition: filter 0.4s ease;
+  }
+
+  /* efeito de hover na imagem */
+  .card-caneca:hover img {
+    filter: blur(2px) brightness(0.75);
+  }
+
+  .conteudo {
+      padding: 0.5rem 1rem; /* padding menor */
+  }
+
+  .conteudo h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #000;
+  }
+
+  .status {
+      margin-top: 0.2rem; /* reduzir ainda mais */
+    font-weight: bold;
+    font-size: 0.95rem;
+  }
+
+  .disponivel {
+    color: #2e7d32;
+  }
+
+  .indisponivel {
+    color: #c62828;
+    opacity: 0.75;
+  }
