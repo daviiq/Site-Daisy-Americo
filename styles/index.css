@@ -1,171 +1,242 @@
 :where(:root) {
-    background-color: #FFFAEB;
-  }
+  background-color: #FFFAEB;
+}
 
-  body {
-    background-color: #FFFAEB;
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-  }
+body {
+  background-color: #FFFAEB;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
 
-  /* ================= HEADER ================= */
+/* ================= HEADER ================= */
 
-  header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #ffffff;
-    box-sizing: border-box;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-  }
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
 
-  .header-content {
-    height: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 3rem;
-    box-sizing: border-box;
-  }
+.header-content {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem;
+  box-sizing: border-box;
+}
 
-  .brand {
-    width: 290px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-  }
+.brand {
+  width: 290px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
 
-  .brand a {
-    font-size: 25px;
-    font-weight: bold;
-    color: #000;
-    text-decoration: none;
-    white-space: nowrap;
-  }
+.brand a {
+  font-size: 25px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  white-space: nowrap;
+}
 
+nav {
+  display: flex;
+  gap: 3rem;
+  padding-right: 2rem;
+}
+
+nav a {
+  color: #000;
+  font-size: 20px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+  white-space: nowrap;
+}
+
+nav a:hover {
+  transform: scale(1.1);
+}
+
+.menu-bar {
+  width: 100%;
+  height: 5px;
+  background-color: #dce0e6;
+}
+
+/* ================= CONTEÚDO ================= */
+
+main.container {
+  margin-top: 70px;
+  padding: 2rem;
+}
+
+/* Container geral da home */
+.home-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+/* ================= CARDS GRANDES ================= */
+
+.cards-main {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-card {
+  position: relative;
+  text-align: center;
+  flex: 0 0 auto;
+  max-width: 230px;
+}
+
+.btn-card p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+  color: #000;
+}
+
+.btn-card img {
+  width: 100%;
+  aspect-ratio: 380 / 600;
+  border-radius: 15px;
+  object-fit: cover;
+  transition: all 0.4s ease;
+  filter: brightness(0.95);
+}
+
+.btn-card:hover img {
+  filter: blur(3px) brightness(0.7);
+}
+
+.btn-card .overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 30%;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.btn-card:hover .overlay {
+  opacity: 1;
+}
+
+.btn-card .overlay span {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* ================= CARDS SMOL ================= */
+
+.cards-smol {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-smol-card {
+  position: relative;
+  text-align: center;
+  flex: 0 0 auto;
+  max-width: 170px; /* menor que o principal */
+}
+
+.btn-smol-card p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 0.6rem;
+  color: #000;
+}
+
+.btn-smol-card img {
+  width: 100%;
+  aspect-ratio: 380 / 600;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: all 0.4s ease;
+  filter: brightness(0.95);
+}
+
+.btn-smol-card:hover img {
+  filter: blur(3px) brightness(0.7);
+}
+
+.btn-smol-card .overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 40%;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.btn-smol-card:hover .overlay {
+  opacity: 1;
+}
+
+.btn-smol-card .overlay span {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 1200px) {
   nav {
-    display: flex;
-    gap: 3rem;
-    padding-right: 2rem;
+    gap: 1.5rem;
   }
 
   nav a {
-    color: #000;
-    font-size: 20px;
-    text-decoration: none;
-    transition: transform 0.2s ease;
-    white-space: nowrap;
+    font-size: 18px;
   }
 
-  nav a:hover {
-    transform: scale(1.1);
+  .brand a {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    height: auto;
+    padding: 1rem 1.5rem;
   }
 
-  .menu-bar {
+  nav {
     width: 100%;
-    height: 5px;
-    background-color: #dce0e6;
+    justify-content: space-between;
   }
-
-  /* ================= CONTEÚDO ================= */
 
   main.container {
-    margin-top: 70px; /* header (90) + barra (5) + respiro */
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    padding: 2rem;
-    flex-wrap: nowrap;
+    margin-top: 170px;
   }
 
-  .btn-card {
-    position: relative;
-    text-align: center;
-    flex: 0 0 auto;
-    max-width: 230px;
+  .cards-main,
+  .cards-smol {
+    gap: 1.8rem;
   }
-
-  .btn-card p {
-    font-size: 1.3rem;
-    font-weight: 500;
-    margin-bottom: 0.8rem;
-    color: #000;
-  }
-
-  .btn-card img {
-    width: 100%;
-    aspect-ratio: 380 / 600;
-    border-radius: 15px;
-    object-fit: cover;
-    transition: all 0.4s ease;
-    filter: brightness(0.95);
-  }
-
-  .btn-card:hover img {
-    filter: blur(3px) brightness(0.7);
-  }
-
-  .btn-card .overlay {
-    position: absolute;
-    inset: 0;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding-top: 40%;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-  }
-
-  .btn-card:hover .overlay {
-    opacity: 1;
-  }
-
-  .btn-card .overlay span {
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-
-  /* ================= RESPONSIVO ================= */
-
-  @media (max-width: 1200px) {
-    nav {
-      gap: 1.0rem;
-    }
-
-    nav a {
-      font-size: 20px;
-    }
-
-    .brand a {
-      font-size: 26px;
-    }
-
-    main.container {
-      flex-wrap: wrap;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .header-content {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1rem;
-      height: auto;
-      padding: 1rem 1.5rem;
-    }
-
-    nav {
-      width: 100%;
-      justify-content: space-between;
-    }
-
-    main.container {
-      margin-top: 170px;
-      gap: 2rem;
-    }
-  }
+}

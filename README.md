@@ -172,3 +172,11 @@ Nenhuma validação automática existe.
 ---
 
 Fim do guia técnico.
+
+---
+
+Pontos a adicionar
+adicionar pagina de linktree
+pagina noticias
+pagina eventos
+auterar a interfase visual para o estilo de art
