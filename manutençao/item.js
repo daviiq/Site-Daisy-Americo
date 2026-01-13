@@ -1,5 +1,4 @@
 /*
-Arquivo: manutencao.js
 
 Responsável por centralizar todos os dados dos quadros e itens do site.
 Qualquer alteração de preço, disponibilidade ou descrição deve ser feita aqui.
@@ -75,7 +74,7 @@ const itens = [
         imagem: "assets/107707092_p0.png"
       },
     {
-        id: 999,
+        id: 7, //
         categoria: "quadro",
         nome: "Boi",
         descricao: "Representação do folclore catarinense.",
@@ -85,5 +84,6 @@ const itens = [
         disponivel: true,
         imagem: "assets/110064784_p0.png"
       }
+
   ];
   

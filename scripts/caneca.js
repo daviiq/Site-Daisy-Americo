@@ -24,7 +24,7 @@ if (!item) {
       <div class="acoes">
         ${
           item.disponivel
-            ? `<a href="https://wa.me/55XXXXXXXXXX?text=${encodeURIComponent(
+            ? `<a href="https://wa.me/554888320641?text=${encodeURIComponent(
                 `Olá, me chamo ____ e tenho interesse na caneca "${item.nome}".`
               )}" role="button">Entrar em contato</a>`
             : `<span role="button" disabled>Indisponível</span>`
