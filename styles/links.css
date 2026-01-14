@@ -62,3 +62,28 @@
     height: 27px;
     object-fit: contain;
   }
+
+    /* Links2 */
+    
+    .link-item2 {
+      background-color: #ffffff;
+      padding: 1rem;
+      text-align: center;
+      text-decoration: none;
+      color: #000;
+      font-size: 18px;
+      font-weight: 500;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(220, 224, 230, 0.9);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .link-item2:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 14px rgba(200, 204, 210, 1);
+    }
+  .link-item2 img {
+    width: 37px;
+    height: 37px;
+    object-fit: contain;
+  }
