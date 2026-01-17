@@ -1,14 +1,15 @@
 /* ================= CARD QUADRO ================= */
   
 .card-quadro {
-    background: #fff;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease;
-    padding-top: 10px;
-    cursor: pointer;
-    max-width: 100%;
+  margin-top: 1rem;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+  padding-bottom: 0px; padding-top: 10px;
+  cursor: pointer; /* indica que é clicável */
+  margin-bottom: 1rem; /* garante que não haja margem extra */
   }
   
   .card-quadro:hover {
@@ -44,3 +45,23 @@
     color: #000;
   }
   
+      /* ================= DESKTOP / TELAS GRANDES ================= */
+@media (min-width: 768px) {
+
+  .card-quadro {
+    border-radius: 22px;
+    padding-top: 14px;
+  }
+
+  .conteudo {
+    padding: 1rem 1.4rem;
+  }
+
+  .conteudo h2 {
+    font-size: 1.6rem;
+  }
+
+  .status {
+    font-size: 1.05rem;
+  }
+}
