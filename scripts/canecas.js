@@ -7,7 +7,7 @@ canecas.forEach(item => {
 
   // Card principal
   const card = document.createElement("article");
-  card.className = "card-caneca";
+  card.className = "card-base card-caneca";
 
   card.innerHTML = `
     <img src="${item.imagem}" alt="${item.nome}">

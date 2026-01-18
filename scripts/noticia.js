@@ -1,35 +1,37 @@
+// Pega o ID da URL
 const params = new URLSearchParams(window.location.search);
 const id = parseInt(params.get("id"));
 
+// Busca o item pelo ID
 const item = itens.find(i => i.id === id);
 const container = document.getElementById("quadro");
 
 if (!item) {
   container.innerHTML = "<p>Obra não encontrada.</p>";
 } else {
+  // Atualiza o título da página
   document.title = item.titulo + " – Daisy Américo";
 
+  // Monta o HTML dentro do container
   container.innerHTML = `
-    <article class="quadro-detalhe">
-      <img src="${item.imagem}" alt="${item.titulo}">
+    <img src="${item.imagem}" alt="${item.titulo}">
 
-      <div class="info">
-        <h1>${item.titulo}</h1>
+    <div class="info">
+      <h1>${item.titulo}</h1>
 
-        <p class="data">
-          <time datetime="${item.data.split('/').reverse().join('-')}">
-            ${item.data}
-          </time>
-        </p>
+      <p>
+        <time datetime="${item.data.split('/').reverse().join('-')}">
+          ${item.data}
+        </time>
+      </p>
 
-        <p class="descricao">
-          ${item.descricao}
-        </p>
+      <p>
+        ${item.descricao}
+      </p>
 
-        <div class="materia">
-          ${item.materia}
-        </div>
+      <div class="materia">
+        ${item.materia}
       </div>
-    </article>
+    </div>
   `;
 }

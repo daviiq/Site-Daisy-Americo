@@ -7,7 +7,7 @@ quadros.forEach(item => {
 
   // Card principal
   const card = document.createElement("article");
-  card.className = "card-quadro";
+  card.className = "card-base card-quadro";
 
   card.innerHTML = `
     <img src="${item.imagem}" alt="${item.nome}">

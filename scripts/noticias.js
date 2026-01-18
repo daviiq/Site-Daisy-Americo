@@ -15,7 +15,7 @@ itensOrdenados.forEach(item => {
 
   // Card principal
   const card = document.createElement("article");
-  card.className = "card-quadro";
+  card.className = "card-noticia-evento";
 
   card.innerHTML = `
     <img src="${item.imagem}" alt="${item.titulo}">

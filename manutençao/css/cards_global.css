@@ -1,0 +1,76 @@
+/* ================= CARD BASE da pagina obas canecas e outros ================= */
+
+.card-base {
+    margin-top: 1rem;
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+    padding-top: 10px;
+    padding-bottom: 0;
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+  
+  .card-base:hover {
+    transform: translateY(-4px);
+  }
+  
+  .card-base img {
+    display: block;
+    aspect-ratio: auto;
+    max-height: 250px;
+    width: 100%;
+    object-fit: cover;
+    transition: filter 0.4s ease;
+  }
+  
+  .card-base:hover img {
+    filter: blur(2px) brightness(0.75);
+  }
+  
+  .card-base .conteudo {
+    padding: 0.5rem 1rem;
+  }
+  
+  .card-base .conteudo h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #000;
+  }
+  
+  .card-base .status {
+    margin-top: 0.2rem;
+    font-weight: bold;
+    font-size: 0.95rem;
+  }
+  
+  .card-base .disponivel {
+    color: #2e7d32;
+  }
+  
+  .card-base .indisponivel {
+    color: #c62828;
+    opacity: 0.75;
+  }
+  
+  @media (min-width: 768px) {
+    .card-base {
+      border-radius: 22px;
+      padding-top: 14px;
+    }
+  
+    .card-base .conteudo {
+      padding: 1rem 1.4rem;
+    }
+  
+    .card-base .conteudo h2 {
+      font-size: 1.6rem;
+    }
+  
+    .card-base .status {
+      font-size: 1.05rem;
+    }
+  }
+  

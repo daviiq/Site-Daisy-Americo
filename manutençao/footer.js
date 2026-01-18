@@ -7,7 +7,7 @@ const footerHTML = `
     <div>
       <h4>Projeto</h4>
       <p>Daisy Américo</p>
-      <p>Versão: <strong>v0.0.1.4 (Alpha)</strong></p>
+      <p>Versão: <strong>v0.0.1.5 (Alpha)</strong></p>
     </div>
 
     <div>
