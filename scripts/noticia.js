@@ -3,7 +3,7 @@ const params = new URLSearchParams(window.location.search);
 const id = parseInt(params.get("id"));
 
 // Busca o item pelo ID
-const item = itens.find(i => i.id === id);
+const item = itens.find((i) => i.id === id);
 const container = document.getElementById("quadro");
 
 if (!item) {
@@ -20,7 +20,7 @@ if (!item) {
       <h1>${item.titulo}</h1>
 
       <p>
-        <time datetime="${item.data.split('/').reverse().join('-')}">
+        <time datetime="${item.data.split("/").reverse().join("-")}">
           ${item.data}
         </time>
       </p>

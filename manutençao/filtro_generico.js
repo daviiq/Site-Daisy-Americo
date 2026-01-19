@@ -29,9 +29,7 @@ toggleFiltros.addEventListener("click", () => {
   filtrosContainer.classList.toggle("aberto", !aberto);
   filtrosContainer.classList.toggle("fechado", aberto);
 
-  toggleFiltros.textContent = aberto
-    ? "▾ Exibir filtros"
-    : "▴ Ocultar filtros";
+  toggleFiltros.textContent = aberto ? "▾ Exibir filtros" : "▴ Ocultar filtros";
 });
 
 // Fecha filtros (usado após filtrar ou resetar)
@@ -49,7 +47,7 @@ function aplicarFiltrosGenerico() {
   // Filtro de disponibilidade
   if (filtroDisponivel.value !== "") {
     const disponivel = filtroDisponivel.value === "true";
-    resultado = resultado.filter(item => item.disponivel === disponivel);
+    resultado = resultado.filter((item) => item.disponivel === disponivel);
   }
 
   // Ordenação por valor

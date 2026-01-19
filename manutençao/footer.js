@@ -52,4 +52,4 @@ const footerHTML = `
 `;
 
 // Insere o footer no final da página
-document.body.insertAdjacentHTML('beforeend', footerHTML);
+document.body.insertAdjacentHTML("beforeend", footerHTML);

@@ -11,8 +11,7 @@ const itensOrdenados = itens
   .slice() // cria uma cópia para não alterar o array original
   .sort((a, b) => parseDataBR(b.data) - parseDataBR(a.data));
 
-itensOrdenados.forEach(item => {
-
+itensOrdenados.forEach((item) => {
   // Card principal
   const card = document.createElement("article");
   card.className = "card-noticia-evento";

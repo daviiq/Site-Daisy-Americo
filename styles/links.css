@@ -1,89 +1,89 @@
 /* ================= LINKTREE ================= */
 
 .linktree {
-    max-width: 480px;
-    width: 100%;
-  }
-  
-  /* Perfil */
-  
-  .profile {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .profile img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-  
-  .profile h1 {
-    margin: 1rem 0 0.3rem;
-    font-size: 26px;
-    color: #000;
-  }
-  
-  .profile p {
-    margin: 0;
-    color: #555;
-  }
-  
-  /* Links */
-  
-  .links {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .link-item {
-    background-color: #ffffff;
-    padding: 1rem;
-    text-align: center;
-    text-decoration: none;
-    color: #000;
-    font-size: 18px;
-    font-weight: 500;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(220, 224, 230, 0.9);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  
-  .link-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 14px rgba(200, 204, 210, 1);
-  }
+  max-width: 480px;
+  width: 100%;
+}
 
-  .link-item img {
-    width: 27px;
-    height: 27px;
-    object-fit: contain;
-  }
+/* Perfil */
 
-    /* Links2 */
-    
-    .link-item2 {
-      background-color: #ffffff;
-      padding: 1rem;
-      text-align: center;
-      text-decoration: none;
-      color: #000;
-      font-size: 18px;
-      font-weight: 500;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(220, 224, 230, 0.9);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    
-    .link-item2:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 14px rgba(200, 204, 210, 1);
-    }
-  .link-item2 img {
-    width: 37px;
-    height: 37px;
-    object-fit: contain;
-  }
+.profile {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.profile img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile h1 {
+  margin: 1rem 0 0.3rem;
+  font-size: 26px;
+  color: #000;
+}
+
+.profile p {
+  margin: 0;
+  color: #555;
+}
+
+/* Links */
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.link-item {
+  background-color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(220, 224, 230, 0.9);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.link-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(200, 204, 210, 1);
+}
+
+.link-item img {
+  width: 27px;
+  height: 27px;
+  object-fit: contain;
+}
+
+/* Links2 */
+
+.link-item2 {
+  background-color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(220, 224, 230, 0.9);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.link-item2:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(200, 204, 210, 1);
+}
+.link-item2 img {
+  width: 37px;
+  height: 37px;
+  object-fit: contain;
+}

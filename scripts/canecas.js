@@ -1,7 +1,7 @@
 const lista = document.getElementById("lista");
 
 // Filtra apenas itens da categoria "caneca"
-const canecas = itens.filter(item => item.categoria === "caneca"); //⚠️⚠️⚠️ATENÇAO⚠️⚠️⚠️
+const canecas = itens.filter((item) => item.categoria === "caneca"); //⚠️⚠️⚠️ATENÇAO⚠️⚠️⚠️
 
 // CONTRATO COM O FILTRO GENÉRICO
 // O filtro espera uma variável global chamada `dadosBase`
@@ -12,13 +12,11 @@ window.dadosBase = canecas; //⚠️⚠️⚠️ATENÇAO⚠️⚠️⚠️
 // CONTRATO COM O FILTRO GENÉRICO
 // O filtro chama diretamente essa função
 function renderizar(itensParaRenderizar) {
-
   // Limpa o container
   lista.innerHTML = "";
 
   // Cria os cards
-  itensParaRenderizar.forEach(item => {
-
+  itensParaRenderizar.forEach((item) => {
     const card = document.createElement("article");
     card.className = "card-base card-caneca"; //⚠️⚠️⚠️ATENÇAO⚠️⚠️⚠️
 

@@ -1,13 +1,18 @@
 const params = new URLSearchParams(window.location.search);
 const id = parseInt(params.get("id"));
 
-const item = itens.find(i => i.id === id && i.categoria === "caneca");
+const item = itens.find((i) => i.id === id && i.categoria === "caneca");
 const container = document.getElementById("caneca");
 
 if (!item) {
   container.innerHTML = "<p>Caneca não encontrada.</p>";
 } else {
   document.title = item.nome + " – Daisy Américo";
+  // ATUALIZA TEXTO DO HEADER
+  const headerLocation = document.querySelector(".header-location");
+  if (headerLocation) {
+    headerLocation.textContent = `Caneca ${item.nome}`;
+  }
 
   container.innerHTML = `
     <img src="${item.imagem}" alt="${item.nome}">
@@ -17,8 +22,8 @@ if (!item) {
       <p><strong>Técnica:</strong> ${item.tecnica}</p>
       <p><strong>Tamanho:</strong> ${item.tamanho}</p>
       <p><strong>Valor:</strong> R$ ${item.valor.toFixed(2)}</p>
-      <p class="status ${item.disponivel ? 'disponivel' : 'indisponivel'}">
-        ${item.disponivel ? 'Disponível' : 'Indisponível'}
+      <p class="status ${item.disponivel ? "disponivel" : "indisponivel"}">
+        ${item.disponivel ? "Disponível" : "Indisponível"}
       </p>
 
       <div class="acoes">

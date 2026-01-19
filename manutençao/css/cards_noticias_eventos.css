@@ -1,53 +1,53 @@
 /* ================= CARD da abas noticas e eventos ================= */
-  
-.card-noticia-evento {
-    margin-top: 1rem;
-    background: #fff;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease;
-    padding-bottom: 0px; padding-top: 10px;
-    cursor: pointer; /* indica que é clicável */
-    margin-bottom: 1rem; /* garante que não haja margem extra */
-  }
-  
-  .card-noticia-evento:hover {
-    transform: translateY(-4px);
-  }
-  
-  .card-noticia-evento img {
-    display: block;
-    width: 100%;
-    max-height: 250px;
-    object-fit: cover;
-    transition: filter 0.4s ease;
-  }
-  
-  .card-noticia-evento:hover img {
-    filter: blur(2px) brightness(0.75);
-  }
-  
-  /* ================= CONTEÚDO ================= */
-  
-  .conteudo {
-    padding: 0.5rem 1rem;
-  }
-  
-  .conteudo h2 {
-    margin: 0;
-    font-size: 1.3rem;
-    color: #000;
-  }
-  
-  .descricao {
-    margin: 0;
-    color: #000;
-  }
-  
-    /* ================= DESKTOP / TELAS GRANDES ================= */
-@media (min-width: 768px) {
 
+.card-noticia-evento {
+  margin-top: 1rem;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  padding-bottom: 0px;
+  padding-top: 10px;
+  cursor: pointer; /* indica que é clicável */
+  margin-bottom: 1rem; /* garante que não haja margem extra */
+}
+
+.card-noticia-evento:hover {
+  transform: translateY(-4px);
+}
+
+.card-noticia-evento img {
+  display: block;
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  transition: filter 0.4s ease;
+}
+
+.card-noticia-evento:hover img {
+  filter: blur(2px) brightness(0.75);
+}
+
+/* ================= CONTEÚDO ================= */
+
+.conteudo {
+  padding: 0.5rem 1rem;
+}
+
+.conteudo h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #000;
+}
+
+.descricao {
+  margin: 0;
+  color: #000;
+}
+
+/* ================= DESKTOP / TELAS GRANDES ================= */
+@media (min-width: 768px) {
   .card-noticia-evento {
     border-radius: 22px;
     padding-top: 14px;

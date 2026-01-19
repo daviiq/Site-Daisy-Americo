@@ -1,79 +1,79 @@
 /* ================= FILTROS COMPACTOS ================= */
 
 .filtros {
-    align-items: end;
-    gap: 0.6rem;
-  }
-  
-  /* Labels menores */
-  .filtros label {
-    font-size: 0.7rem;
-  }
-  
-  /* Selects pequenos e claros */
-  .filtros select {
-    padding: 0.35rem 0.55rem;
-    font-size: 0.75rem;
-    height: auto;
-  
-    background-color: #FFFAEB !important;
-    color: #333;
-  
-    border: none;
-    border-radius: 10px;
-  
-    box-shadow: 0 4px 8px rgba(220, 224, 230, 0.9);
-  }
-  
-  /* Remove estilo escuro do Pico */
-  .filtros select:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px rgba(220, 224, 230, 0.6);
-  }
-  
-  /* Container dos botões */
-  .acoes-filtro {
-    display: flex;
-    gap: 0.4rem;
-  }
-  
-  /* Botão filtrar (menor e claro) */
-  #aplicarFiltros {
-    padding: 0.4rem 0.7rem;
-    font-size: 0.75rem;
-  
-    background-color: #ffffff;
-    color: #333;
-  
-    border: none;
-    border-radius: 10px;
-  
-    box-shadow: 0 4px 8px rgba(220, 224, 230, 0.9);
-  }
-  
-  /* Botão reset */
-  .btn-reset {
-    padding: 0.3rem 0.6rem;
-    font-size: 0.7rem;
-  
-    background-color: #FFFAEB;
-    color: #333;
-  
-    border: none;
-    border-radius: 10px;
-  
-    box-shadow: 0 4px 8px rgba(220, 224, 230, 0.9);
-  
-    cursor: pointer;
-  }
-  
-  /* Hover sutil para ambos */
-  #aplicarFiltros:hover,
-  .btn-reset:hover {
-    transform: translateY(-1px);
-  }
+  align-items: end;
+  gap: 0.6rem;
+}
 
-  /* ================= ESPAÇAMENTO ENTRE FILTRO E OBRAS ================= */
+/* Labels menores */
+.filtros label {
+  font-size: 0.7rem;
+}
+
+/* Selects pequenos e claros */
+.filtros select {
+  padding: 0.35rem 0.55rem;
+  font-size: 0.75rem;
+  height: auto;
+
+  background-color: #fffaeb !important;
+  color: #333;
+
+  border: none;
+  border-radius: 10px;
+
+  box-shadow: 0 4px 8px rgba(220, 224, 230, 0.9);
+}
+
+/* Remove estilo escuro do Pico */
+.filtros select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(220, 224, 230, 0.6);
+}
+
+/* Container dos botões */
+.acoes-filtro {
+  display: flex;
+  gap: 0.4rem;
+}
+
+/* Botão filtrar (menor e claro) */
+#aplicarFiltros {
+  padding: 0.4rem 0.7rem;
+  font-size: 0.75rem;
+
+  background-color: #ffffff;
+  color: #333;
+
+  border: none;
+  border-radius: 10px;
+
+  box-shadow: 0 4px 8px rgba(220, 224, 230, 0.9);
+}
+
+/* Botão reset */
+.btn-reset {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.7rem;
+
+  background-color: #fffaeb;
+  color: #333;
+
+  border: none;
+  border-radius: 10px;
+
+  box-shadow: 0 4px 8px rgba(220, 224, 230, 0.9);
+
+  cursor: pointer;
+}
+
+/* Hover sutil para ambos */
+#aplicarFiltros:hover,
+.btn-reset:hover {
+  transform: translateY(-1px);
+}
+
+/* ================= ESPAÇAMENTO ENTRE FILTRO E OBRAS ================= */
 
 /* Remove margem extra do Pico */
 main.container > section {
@@ -93,41 +93,41 @@ main.container > section {
 /* ================= FILTROS COLAPSÁVEIS ================= */
 
 .filtro-wrapper {
-    margin-bottom: 0.4rem;
-  }
-  
-  /* Botão "Exibir filtros" */
-  .btn-toggle-filtros {
-    padding: 0.35rem 0.7rem;
-    font-size: 0.75rem;
-  
-    background-color: #ffffff;
-    color: #333;
-  
-    border: none;
-    border-radius: 10px;
-  
-    box-shadow: 0 4px 8px rgba(220, 224, 230, 0.9);
-    cursor: pointer;
-  }
-  
-  /* Container animado */
-  #filtrosContainer {
-    overflow: hidden;
-    transition: max-height 0.35s ease, opacity 0.25s ease;
-  }
-  
-  /* Estado fechado */
-  #filtrosContainer.fechado {
-    max-height: 0;
-    opacity: 0;
-    pointer-events: none;
-  }
-  
-  /* Estado aberto */
-  #filtrosContainer.aberto {
-    max-height: 200px;
-    opacity: 1;
-    pointer-events: auto;
-    margin-top: 0.3rem;
-  }  
+  margin-bottom: 0.4rem;
+}
+
+/* Botão "Exibir filtros" */
+.btn-toggle-filtros {
+  padding: 0.35rem 0.7rem;
+  font-size: 0.75rem;
+
+  background-color: #ffffff;
+  color: #333;
+
+  border: none;
+  border-radius: 10px;
+
+  box-shadow: 0 4px 8px rgba(220, 224, 230, 0.9);
+  cursor: pointer;
+}
+
+/* Container animado */
+#filtrosContainer {
+  overflow: hidden;
+  transition: max-height 0.35s ease, opacity 0.25s ease;
+}
+
+/* Estado fechado */
+#filtrosContainer.fechado {
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Estado aberto */
+#filtrosContainer.aberto {
+  max-height: 200px;
+  opacity: 1;
+  pointer-events: auto;
+  margin-top: 0.3rem;
+}

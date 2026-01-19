@@ -1,11 +1,11 @@
 .titulo-encomenda {
-    text-align: center;
-    margin: 2rem 0 2.5rem 0;
-  }
-  
-  .titulo-encomenda p {
-    font-size: 1.3rem;
-    font-weight: 500;
-    margin-bottom: 0.8rem;
-    color: #000;
-  }
+  text-align: center;
+  margin: 2rem 0 2.5rem 0;
+}
+
+.titulo-encomenda p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+  color: #000;
+}

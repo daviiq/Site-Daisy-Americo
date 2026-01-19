@@ -7,7 +7,7 @@ const lista = document.getElementById("lista");
 
 // Apenas itens da categoria "quadro"
 // ESSA variável é a base da página
-const quadros = itens.filter(item => item.categoria === "quadro");
+const quadros = itens.filter((item) => item.categoria === "quadro");
 
 // ⚠️ CONTRATO COM O FILTRO GENÉRICO
 // O filtro espera uma variável global chamada `dadosBase`
@@ -18,13 +18,11 @@ window.dadosBase = quadros;
 // ⚠️ CONTRATO COM O FILTRO GENÉRICO
 // O filtro chama diretamente essa função
 function renderizar(itensParaRenderizar) {
-
   // Limpa o container
   lista.innerHTML = "";
 
   // Cria os cards
-  itensParaRenderizar.forEach(item => {
-
+  itensParaRenderizar.forEach((item) => {
     const card = document.createElement("article");
     card.className = "card-base card-quadro";
 
