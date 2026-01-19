@@ -1,28 +1,50 @@
 const lista = document.getElementById("lista");
 
 // Filtra apenas itens da categoria "caneca"
-const canecas = itens.filter(item => item.categoria === "outro");
+const outro = itens.filter(item => item.categoria === "outro"); //⚠️⚠️⚠️ATENÇAO⚠️⚠️⚠️
 
-canecas.forEach(item => {
+// CONTRATO COM O FILTRO GENÉRICO
+// O filtro espera uma variável global chamada `dadosBase`
+window.dadosBase = outro; //⚠️⚠️⚠️ATENÇAO⚠️⚠️⚠️
 
-  // Card principal
-  const card = document.createElement("article");
-  card.className = "card-base card-outros";
+// ================= RENDER =================
 
-  card.innerHTML = `
-    <img src="${item.imagem}" alt="${item.nome}">
-    <div class="conteudo">
-      <h2>${item.nome}</h2>
-      <p class="status ${item.disponivel ? 'disponivel' : 'indisponivel'}">
-        ${item.disponivel ? 'Disponível' : 'Indisponível'}
-      </p>
-    </div>
-  `;
+// CONTRATO COM O FILTRO GENÉRICO
+// O filtro chama diretamente essa função
+function renderizar(itensParaRenderizar) {
 
-  // Evento de clique no card
-  card.addEventListener("click", () => {
-    window.location.href = `outro.html?id=${item.id}`;
+  // Limpa o container
+  lista.innerHTML = "";
+
+  // Cria os cards
+  itensParaRenderizar.forEach(item => {
+
+    const card = document.createElement("article");
+    card.className = "card-base card-outro"; //⚠️⚠️⚠️ATENÇAO⚠️⚠️⚠️
+
+    card.innerHTML = `
+      <img src="${item.imagem}" alt="${item.nome}">
+      <div class="conteudo">
+        <h2>${item.nome}</h2>
+
+        <p class="status ${item.disponivel ? "disponivel" : "indisponivel"}">
+          ${item.disponivel ? "Disponível" : "Indisponível"}
+        </p>
+
+        <p><strong>R$ ${item.valor}</strong></p>
+      </div>
+    `;
+
+    // Clique no card
+    card.addEventListener("click", () => {
+      window.location.href = `outro.html?id=${item.id}`; //⚠️⚠️⚠️ATENÇAO⚠️⚠️⚠️
+    });
+
+    lista.appendChild(card);
   });
+}
 
-  lista.appendChild(card);
-});
+// ================= INIT =================
+
+// Render inicial da página
+renderizar(dadosBase);

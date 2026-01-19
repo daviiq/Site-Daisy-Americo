@@ -7,6 +7,7 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
   <link rel="stylesheet" href="manutençao/css/fundo+header.css" />
+  <link rel="stylesheet" href="manutençao/css/filtro_items.css" />
   <link rel="stylesheet" href="manutençao/css/cards_global.css">
   <link rel="stylesheet" href="styles/outros.css" />
 
@@ -27,11 +28,75 @@
   </header>
 
   <main class="container">
+
+    <!-- ================= FILTROS ================= -->
+<!-- Botão que abre e fecha os filtros -->
+<section class="filtro-wrapper">
+
+  <button
+    id="toggleFiltros"
+    class="btn-toggle-filtros"
+    type="button"
+  >
+    ▾ Exibir filtros
+  </button>
+
+  <!-- Container que abre / fecha -->
+  <div id="filtrosContainer" class="filtros fechado">
+
+    <!-- Form dos filtros -->
+    <form class="grid filtros-form">
+
+      <!-- Filtro de ordenação por valor -->
+      <label>
+        Ordenar por valor
+        <select id="filtroValor">
+          <option value="">Padrão</option>
+          <option value="asc">Menor preço</option>
+          <option value="desc">Maior preço</option>
+        </select>
+      </label>
+
+      <!-- Filtro de disponibilidade -->
+      <label>
+        Disponibilidade
+        <select id="filtroDisponivel">
+          <option value="">Todos</option>
+          <option value="true">Disponível</option>
+          <option value="false">Indisponível</option>
+        </select>
+      </label>
+
+      <!-- Botões de ação -->
+      <div class="acoes-filtro">
+
+        <!-- Aplica filtros -->
+        <button type="button" id="aplicarFiltros">
+          Filtrar
+        </button>
+
+        <!-- Reseta filtros -->
+        <button
+          type="button"
+          id="resetFiltros"
+          class="btn-reset"
+        >
+          Resetar
+        </button>
+
+      </div>
+
+    </form>
+  </div>
+</section>
+<!-- ================= FIM FILTROS ================= -->
+
     <section class="grid" id="lista"></section>
   </main>
 
   <!-- Dados -->
   <script src="manutençao/item.js"></script>
+  <script src="manutençao/filtro_generico.js"></script>
   <script src="scripts/outros.js"></script>
   <script src="manutençao/footer.js"></script>
 </body>
