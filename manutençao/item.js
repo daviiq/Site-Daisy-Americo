@@ -16,7 +16,7 @@ const itens = [
     tamanho: "60 x 80 cm",
     valor: 1200,
     disponivel: false,
-    imagem: "assets/95672760_p0.png",
+    imagem: "/assets/95672760_p0.png",
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const itens = [
     tamanho: "50 x 70 cm",
     valor: 950,
     disponivel: true,
-    imagem: "assets/95995158_p0.png",
+    imagem: "/assets/95995158_p0.png",
   },
   {
     id: 3,
@@ -38,7 +38,7 @@ const itens = [
     tamanho: "50 x 70 cm",
     valor: 950,
     disponivel: true,
-    imagem: "assets/103189471_p1.png",
+    imagem: "/assets/103189471_p1.png",
   },
   {
     id: 4,
@@ -49,7 +49,7 @@ const itens = [
     tamanho: "50 x 70 cm",
     valor: 950,
     disponivel: true,
-    imagem: "assets/103504025_p0.png",
+    imagem: "/assets/103504025_p0.png",
   },
   {
     id: 5,
@@ -60,7 +60,7 @@ const itens = [
     tamanho: "50 x 70 cm",
     valor: 950,
     disponivel: true,
-    imagem: "assets/103673150_p0.png",
+    imagem: "/assets/103673150_p0.png",
   },
   {
     id: 6,
@@ -71,7 +71,7 @@ const itens = [
     tamanho: "50 x 70 cm",
     valor: 950,
     disponivel: true,
-    imagem: "assets/107707092_p0.png",
+    imagem: "/assets/107707092_p0.png",
   },
   {
     id: 7, //
@@ -82,6 +82,6 @@ const itens = [
     tamanho: "50 x 70 cm",
     valor: 950,
     disponivel: true,
-    imagem: "assets/110064784_p0.png",
+    imagem: "/assets/110064784_p0.png",
   },
 ];

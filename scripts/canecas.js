@@ -29,7 +29,7 @@ function renderizar(itensParaRenderizar) {
           ${item.disponivel ? "Disponível" : "Indisponível"}
         </p>
 
-        <p><strong>R$ ${item.valor}</strong></p>
+        <p><strong style="color: #000">R$ ${item.valor}</strong></p>
       </div>
     `;
 
