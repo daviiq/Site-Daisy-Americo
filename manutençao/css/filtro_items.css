@@ -8,6 +8,7 @@
 /* Labels menores */
 .filtros label {
   font-size: 0.7rem;
+  color: #7C3606
 }
 
 /* Selects pequenos e claros */
@@ -17,7 +18,7 @@
   height: auto;
 
   background-color: #fffaeb !important;
-  color: #333;
+  color: #471C02;
 
   border: none;
   border-radius: 10px;
@@ -43,7 +44,7 @@
   font-size: 0.75rem;
 
   background-color: #ffffff;
-  color: #333;
+  color: #471C02;
 
   border: none;
   border-radius: 10px;
@@ -57,7 +58,7 @@
   font-size: 0.7rem;
 
   background-color: #fffaeb;
-  color: #333;
+  color: #471C02;
 
   border: none;
   border-radius: 10px;
@@ -102,7 +103,7 @@ main.container > section {
   font-size: 0.75rem;
 
   background-color: #ffffff;
-  color: #333;
+  color: #471C02;
 
   border: none;
   border-radius: 10px;

@@ -4,8 +4,9 @@
 }
 
 .titulo-encomenda p {
-  font-size: 1.3rem;
+  text-align: center;
+  font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 0.8rem;
-  color: #000;
+  color: #471C02;
 }

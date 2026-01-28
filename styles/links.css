@@ -23,12 +23,12 @@
 .profile h1 {
   margin: 1rem 0 0.3rem;
   font-size: 26px;
-  color: #000;
+  color: #471C02;
 }
 
 .profile p {
   margin: 0;
-  color: #555;
+  color: #7C3606;
 }
 
 /* Links */
@@ -44,7 +44,7 @@
   padding: 1rem;
   text-align: center;
   text-decoration: none;
-  color: #000;
+  color: #471C02;
   font-size: 18px;
   font-weight: 500;
   border-radius: 12px;
@@ -54,7 +54,7 @@
 
 .link-item:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 14px rgba(200, 204, 210, 1);
+  box-shadow: 0 6px 14px rgba(48, 126, 128, 0.5);
 }
 
 .link-item img {
@@ -70,7 +70,7 @@
   padding: 1rem;
   text-align: center;
   text-decoration: none;
-  color: #000;
+  color: #471C02;
   font-size: 18px;
   font-weight: 500;
   border-radius: 12px;
@@ -80,7 +80,7 @@
 
 .link-item2:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 14px rgba(200, 204, 210, 1);
+  box-shadow: 0 6px 14px rgba(48, 126, 128, 0.5);
 }
 .link-item2 img {
   width: 37px;
