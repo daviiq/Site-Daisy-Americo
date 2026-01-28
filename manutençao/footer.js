@@ -1,6 +1,6 @@
 // footer.js
 const footerHTML = `
-<footer style="background:#222;color:#fff;padding:2rem;">
+<footer style="background:#222;color:#EBFEFF;padding:2rem;">
   
   <!-- Me acompanhe -->
   <div style="
@@ -15,14 +15,14 @@ const footerHTML = `
     <span>Me acompanhe:</span>
     <a href="https://www.instagram.com/daisyamericooficial/"
        class="link-item"
-       style="display:flex;align-items:center;gap:6px;color:#fff;text-decoration:none;">
+       style="display:flex;align-items:center;gap:6px;color:#EBFEFF;text-decoration:none;">
       <img src="/assets/icon/insta.png" alt="Instagram" style="height:18px;">
       <span>Instagram</span>
     </a>
 
     <a href="https://www.instagram.com/galeriadaisyamerico/"
        class="link-item"
-       style="display:flex;align-items:center;gap:6px;color:#fff;text-decoration:none;">
+       style="display:flex;align-items:center;gap:6px;color:#EBFEFF;text-decoration:none;">
       <img src="/assets/icon/insta.png" alt="Instagram" style="height:18px;">
       <span>Instagram Galeria</span>
     </a>
@@ -57,13 +57,8 @@ const footerHTML = `
     <div>
       <h4>Créditos</h4>
       <p>
-        Criado por:<br>
-        <a href="https://site-curriculo.pages.dev/" target="_blank">
-          Igor Rodrigues da Silva
-        </a><br>
-        <a href="https://github.com/daviiq" target="_blank">
-          Davi Israel Quirino
-        </a>
+        <a href="https://site-curriculo.pages.dev/" target="_blank">Igor Rodrigues da Silva</a><br>
+        <a href="https://github.com/daviiq" target="_blank">Davi Israel Quirino</a>
       </p>
     </div>
 

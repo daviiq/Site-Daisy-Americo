@@ -5,7 +5,6 @@
   background: #fff;
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
   padding-bottom: 0px;
   padding-top: 10px;
@@ -38,14 +37,13 @@
 .conteudo h2 {
   margin: 0;
   font-size: 1.3rem;
-  color: #000;
+  color: #471C02;
 }
 
 .descricao {
   margin: 0;
-  color: #000;
+  color: #471C02;
 }
-
 /* ================= DESKTOP / TELAS GRANDES ================= */
 @media (min-width: 768px) {
   .card-noticia-evento {

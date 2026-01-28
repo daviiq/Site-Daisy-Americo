@@ -21,7 +21,8 @@ itensOrdenados.forEach((item) => {
     <div class="conteudo">
       <h2>${item.titulo}</h2>
       <p class="descricao">${item.descricao}</p>
-      <span class="data">${item.data}</span>
+      <br>
+      <span style="color: #7C3606">${item.data}</span>
     </div>
   `;
 
