@@ -5,7 +5,7 @@
 body {
   background-color: #fffaeb;
   margin: 0;
-  font-family: "Segoe UI", sans-serif;
+  font-family: "Google Sans Flex", sans-serif;
 }
 
 /* ================= HEADER ================= */
@@ -168,4 +168,11 @@ main.container {
   .grid {
     grid-template-columns: 1fr;
   }
+}
+
+@font-face {
+  font-family: "Google Sans Flex";
+  src: url("/assets/fonts/GoogleSansFlex-VariableFont_GRAD\,ROND\,opsz\,slnt\,wdth\,wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
