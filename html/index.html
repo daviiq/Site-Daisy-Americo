@@ -5,21 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Daisy Américo – Ateliê de Arte</title>
 
+    <!-- Pico CSS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
     />
+
+    <!-- Teus CSS -->
     <link rel="stylesheet" href="../manutençao/css/fundo+header.css" />
     <link rel="stylesheet" href="../manutençao/css/btn_cards_global.css" />
     <link rel="stylesheet" href="../styles/index.css" />
   </head>
 
   <body>
+    <!-- ================= HEADER ================= -->
     <header style="padding-top: 1px; padding-bottom: 1px">
       <div class="header-content">
         <div class="brand">
           <a href="">Daisy Américo</a>
         </div>
+
         <!-- TEXTO DE LOCALIZAÇÃO -->
         <div class="header-location">Home</div>
 
@@ -31,6 +36,7 @@
       </div>
     </header>
 
+    <!-- ================= MAIN ================= -->
     <main class="container home-cards">
       <div class="cards-main">
         <div class="btn-card">
@@ -83,7 +89,51 @@
           </a>
         </div>
       </div>
+      <div>
+                <!-- SELETOR DE FONTE (temporário pra decisão) -->
+                <select id="fontSelector" style="margin-left: 1rem;">
+                  <option value="google">Google Sans</option>
+                  <option value="pacifico">Pacifico</option>
+                </select>
+      </div>
     </main>
+
+    <!-- ================= FOOTER ================= -->
     <script src="../manutençao/footer.js"></script>
+
+    <!-- ================= JS FONTE ================= -->
+    <script>
+      const root = document.documentElement;
+      const selector = document.getElementById("fontSelector");
+
+      // Aplica fonte salva (se existir)
+      const fonteSalva = localStorage.getItem("fonte-ui");
+      if (fonteSalva) {
+        selector.value = fonteSalva;
+        aplicarFonte(fonteSalva);
+      }
+
+      selector.addEventListener("change", () => {
+        const valor = selector.value;
+        localStorage.setItem("fonte-ui", valor);
+        aplicarFonte(valor);
+      });
+
+      function aplicarFonte(tipo) {
+    if (tipo === "pacifico") {
+      document.body.setAttribute("data-font", "pacifico");
+      document.documentElement.style.setProperty(
+        "--font-ui",
+        "'Pacifico', cursive"
+      );
+    } else {
+      document.body.removeAttribute("data-font");
+      document.documentElement.style.setProperty(
+        "--font-ui",
+        "'Google Sans Flex', sans-serif"
+          );
+        }
+      }
+    </script>
   </body>
 </html>

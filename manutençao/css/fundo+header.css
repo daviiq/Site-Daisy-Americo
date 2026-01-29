@@ -1,11 +1,25 @@
+/* ================= ROOT ================= */
+
 :where(:root) {
   background-color: #fffaeb;
+  --font-ui: "Google Sans Flex", sans-serif;
 }
+
+/* ================= BODY ================= */
 
 body {
   background-color: #fffaeb;
   margin: 0;
-  font-family: "Google Sans Flex", sans-serif;
+  font-family: var(--font-ui);
+}
+
+body[data-font="pacifico"] {
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+}
+
+body[data-font="pacifico"] * {
+  font-weight: 400 !important;
 }
 
 /* ================= HEADER ================= */
@@ -21,7 +35,6 @@ header {
   display: flex;
   flex-direction: column;
   box-shadow: 0 3px 10px rgba(48, 126, 128, 0.25);
-  /* altura desktop */
   height: 90px;
 }
 
@@ -36,6 +49,7 @@ header {
   color: #471C02;
   white-space: nowrap;
   pointer-events: none;
+  font-family: var(--font-ui);
 }
 
 /* ================= HEADER CONTENT ================= */
@@ -47,12 +61,14 @@ header {
   padding: 1rem 3rem;
   box-sizing: border-box;
 }
+
 .brand a {
   font-size: 25px;
   font-weight: bold;
   color: #471C02;
   text-decoration: none;
   white-space: nowrap;
+  font-family: var(--font-ui);
 }
 
 nav {
@@ -66,20 +82,22 @@ nav a {
   text-decoration: none;
   transition: transform 0.2s ease;
   white-space: nowrap;
+  font-family: var(--font-ui);
 }
 
 nav a:hover {
   transform: scale(1.1);
 }
 
-/* Scrollbar personalizada */
+/* ================= SCROLLBAR ================= */
+
 /* Firefox */
 * {
   scrollbar-width: thin;
   scrollbar-color: #471C02 #fffaeb;
 }
 
-/* Chrome, Edge, Safari */
+/* Chrome / Edge / Safari */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -98,9 +116,8 @@ nav a:hover {
   background-color: #7C3606;
 }
 
-/* ================= RESPONSIVO DO MENU ================= */
+/* ================= RESPONSIVO ================= */
 
-/* Tela média: até 1200px de largura */
 @media (max-width: 1200px) {
   nav {
     gap: 1rem;
@@ -117,7 +134,6 @@ nav a:hover {
 
 @media (max-width: 768px) {
   header {
-    /* header cresce no mobile */
     height: 140px;
   }
 
@@ -145,7 +161,6 @@ nav a:hover {
 /* ================= MAIN ================= */
 
 main.container {
-  /* compensa a altura do header fixo */
   padding-top: 120px;
   padding-left: 3rem;
   padding-right: 3rem;
@@ -153,7 +168,6 @@ main.container {
   box-sizing: border-box;
 }
 
-/* Mobile */
 @media (max-width: 768px) {
   main.container {
     padding-top: 170px;
@@ -181,7 +195,6 @@ main.container {
   align-items: start;
 }
 
-/* Tablets */
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -189,16 +202,26 @@ main.container {
   }
 }
 
-/* Celulares */
 @media (max-width: 470px) {
   .grid {
     grid-template-columns: 1fr;
   }
 }
 
+/* ================= FONTES LOCAIS ================= */
+
 @font-face {
   font-family: "Google Sans Flex";
-  src: url("/assets/fonts/GoogleSansFlex-VariableFont_GRAD\,ROND\,opsz\,slnt\,wdth\,wght.ttf") format("truetype");
+  src: url("/assets/fonts/GoogleSansFlex-VariableFont_GRAD\,ROND\,opsz\,slnt\,wdth\,wght.ttf")
+       format("truetype");
   font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pacifico";
+  src: url("/assets/fonts/Pacifico-Regular.ttf")
+       format("truetype");
+  font-weight: 400;
   font-style: normal;
 }
