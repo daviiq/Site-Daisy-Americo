@@ -1,0 +1,110 @@
+/* ================= MAIN ================= */
+
+main.container {
+    padding-top: 120px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1{
+    box-shadow: #7C3606;
+  }
+  
+  /* ================= 404 ================= */
+  
+  .error-wrapper {
+    text-align: center;
+    max-width: 600px;
+  }
+  
+  .error-wrapper h1 {
+    font-size: 120px;
+    margin: 0;
+    color: #471C02;
+    text-shadow:
+    0 0 6px rgba(255,255,255,.6),
+    0 0 12px rgba(255,255,255,.4);
+  }
+  
+  .error-wrapper h2 {
+    margin-top: 0;
+    font-size: 28px;
+    color: #471C02;
+    text-shadow:
+    0 0 6px rgba(255,255,255,.6),
+    0 0 12px rgba(255,255,255,.4);
+  }
+  
+  .error-wrapper p {
+    font-size: 18px;
+    color: #7C3606;
+    margin: 1rem 0 2rem;
+  }
+  
+  .error-wrapper a {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #471C02;
+    color: #fffaeb;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: transform .2s ease;
+    box-shadow: 0 8px 8px rgba(220, 224, 230, 0.9);
+  }
+  
+  .error-wrapper a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 10px rgba(48, 126, 128, 0.25);
+  }
+  
+  /* ================= RESPONSIVO ================= */
+  
+  @media (max-width: 768px) {
+    main.container {
+      padding-top: 170px;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  
+    .error-wrapper h1 {
+      font-size: 90px;
+    }
+  }
+
+  /* VIDEO FUNDO */
+
+  .video-bg {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 520px;
+    height: 240px;
+    overflow: hidden;
+    border-radius: 12px;
+    z-index: -1;
+    box-shadow: 0 3px 10px rgba(48, 126, 128, 0.25);
+  }
+  
+  .video-bg video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* remove sombra escura */
+  .video-bg::after {
+    display: none;
+  }  
+  
+  /* garante que conteúdo fique acima */
+  
+  body {
+    position: relative;
+    z-index: 1;
+  }  
