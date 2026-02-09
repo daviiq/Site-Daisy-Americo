@@ -7,19 +7,21 @@
 
 /* ================= BODY ================= */
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
   background-color: #fffaeb;
   margin: 0;
   font-family: var(--font-ui);
+  display: flex;
+  flex-direction: column;
 }
 
-body[data-font="pacifico"] {
-  font-family: 'Pacifico', cursive;
-  font-weight: 400;
-}
-
-body[data-font="pacifico"] * {
-  font-weight: 400 !important;
+footer {
+  margin-top: auto;
 }
 
 /* ================= HEADER ================= */
@@ -215,13 +217,5 @@ main.container {
   src: url("/assets/fonts/GoogleSansFlex-VariableFont_GRAD\,ROND\,opsz\,slnt\,wdth\,wght.ttf")
        format("truetype");
   font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Pacifico";
-  src: url("/assets/fonts/Pacifico-Regular.ttf")
-       format("truetype");
-  font-weight: 400;
   font-style: normal;
 }
