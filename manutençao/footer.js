@@ -69,7 +69,6 @@ const footerHTML = `
   <p style="text-align:center;font-size:0.85rem;">
     © 2026 Daisy Américo — Todos os direitos reservados.
   </p>
-
 </footer>
 `;
 
