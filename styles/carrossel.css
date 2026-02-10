@@ -1,0 +1,133 @@
+/* ================= CAROUSEL WRAPPER ================= */
+
+.carousel-wrapper{
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 2rem auto;
+    perspective: 1200px;
+  }
+  
+  /* ================= CAROUSEL AREA ================= */
+  
+  .carousel{
+    position: relative;
+    height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  /* ================= CARD ================= */
+  
+  .card{
+    position: absolute;
+    width: 240px;
+    height: 320px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0,0,0,.15);
+    padding: 1rem;
+    text-align: center;
+    transition: 
+      transform .6s ease,
+      opacity .4s ease;
+    cursor: pointer;
+  }
+  
+  .card img{
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .card h3{
+    font-size: 1rem;
+    margin: .5rem 0;
+  }
+  
+  .old{
+    text-decoration: line-through;
+    color: #999;
+    font-size: .85rem;
+  }
+  
+  .price{
+    color: #0a8;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  /* Hoverzinho */
+  
+  .card:hover{
+    transform: scale(1.05);
+  }
+  
+  /* ================= SETAS ================= */
+  
+  .arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #000;
+    color: #fff;
+    border: none;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.4rem;
+    opacity: .7;
+    z-index: 10;
+  }
+  
+  .arrow:hover{
+    opacity: 1;
+  }
+  
+  .arrow.left{
+    left: -10px;
+  }
+  
+  .arrow.right{
+    right: -10px;
+  }
+  
+  /* ================= RESPONSIVO ================= */
+  
+  /* Tablet */
+  
+  @media(max-width:900px){
+  
+    .carousel-wrapper{
+      max-width: 700px;
+    }
+  
+    .card{
+      width: 200px;
+      height: 300px;
+    }
+  }
+  
+  /* Mobile */
+  
+  @media(max-width:600px){
+  
+    .carousel{
+      height: 300px;
+    }
+  
+    .card{
+      width: 170px;
+      height: 260px;
+    }
+  
+    .arrow{
+      width: 36px;
+      height: 36px;
+    }
+  }
+  

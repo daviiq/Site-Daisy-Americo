@@ -16,6 +16,8 @@ const itens = [
     tamanho: "60 x 80 cm",
     valor: 1200,
     disponivel: false,
+    destaque: false,
+    desconto: false,
     imagem: "/assets/95672760_p0.png",
   },
   {
@@ -27,6 +29,8 @@ const itens = [
     tamanho: "50 x 70 cm",
     valor: 950,
     disponivel: true,
+    destaque: true,
+    desconto: false,
     imagem: "/assets/95995158_p0.png",
   },
   {
@@ -38,6 +42,8 @@ const itens = [
     tamanho: "50 x 70 cm",
     valor: 950,
     disponivel: true,
+    destaque: true,
+    desconto: false,
     imagem: "/assets/103189471_p1.png",
   },
   {
@@ -49,6 +55,8 @@ const itens = [
     tamanho: "50 x 70 cm",
     valor: 950,
     disponivel: true,
+    destaque: true,
+    desconto: false,
     imagem: "/assets/103504025_p0.png",
   },
   {
@@ -60,6 +68,8 @@ const itens = [
     tamanho: "50 x 70 cm",
     valor: 950,
     disponivel: true,
+    destaque: false,
+    desconto: false,
     imagem: "/assets/103673150_p0.png",
   },
   {
@@ -71,6 +81,8 @@ const itens = [
     tamanho: "50 x 70 cm",
     valor: 950,
     disponivel: true,
+    destaque: true,
+    desconto: false,
     imagem: "/assets/107707092_p0.png",
   },
   {
@@ -82,6 +94,8 @@ const itens = [
     tamanho: "50 x 70 cm",
     valor: 950,
     disponivel: true,
+    destaque: false,
+    desconto: 50,
     imagem: "/assets/110064784_p0.png",
   },
 ];
