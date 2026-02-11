@@ -1,133 +1,238 @@
-/* ================= CAROUSEL WRAPPER ================= */
+/* ================= WRAPPER ================= */
 
-.carousel-wrapper{
-    position: relative;
-    width: 100%;
-    max-width: 900px;
-    margin: 2rem auto;
-    perspective: 1200px;
+.carousel-wrapper {
+  width: 90%;
+  max-width: 900px;
+  margin: 1px auto;
+  margin-top: -20px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 90px;
+}
+
+.carousel-wrapper h2 {
+  margin-bottom: 4px;
+}
+
+
+/* ================= CARROSSEL ================= */
+
+.carousel-destaque,
+.carousel-desconto {
+  position: relative;
+  perspective: 1000px;
+  margin-top: 5px;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-wrapper p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-top: 2.5rem;
+  color: #471C02;
+}
+
+.carousel-wrapper p2 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #471C02;
+}
+
+
+/* ================= CARDS ================= */
+
+.cardsel {
+  position: absolute;
+  width: 240px;
+  height: 300px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(48, 126, 128, 0.25);
+  transition: transform .5s ease, opacity .5s ease;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 10px;
+  text-align: center;
+  z-index: 1;
+}
+
+.cardsel img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 6px;
+}
+
+.cardsel h3 {
+  font-size: 1rem;
+  margin: 4px 0;
+  font-weight: 600;
+  color: #333;
+}
+
+.cardsel .old {
+  text-decoration: line-through;
+  color: #8c1a03;
+  font-size: .85rem;
+  margin-bottom: 2px;
+}
+
+.cardsel .price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #044708;
+}
+
+
+/* ================= SETAS ================= */
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  background: #471C02;
+  border: none;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(220, 224, 230, 0.9);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow.left {
+  left: -40px;
+}
+
+.arrow.right {
+  right: -40px;
+}
+
+.arrow:hover {
+  background: #7c3606;
+}
+
+
+/* ================= RESPONSIVO TABLET ================= */
+
+@media(max-width: 900px) {
+
+  .cardsel {
+    width: 200px;
+    height: 260px;
   }
-  
-  /* ================= CAROUSEL AREA ================= */
-  
-  .carousel{
-    position: relative;
-    height: 360px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+
+  .cardsel img {
+    height: 130px;
   }
-  
-  /* ================= CARD ================= */
-  
-  .card{
-    position: absolute;
-    width: 240px;
-    height: 320px;
-    background: #fff;
-    border-radius: 14px;
-    box-shadow: 0 12px 30px rgba(0,0,0,.15);
-    padding: 1rem;
-    text-align: center;
-    transition: 
-      transform .6s ease,
-      opacity .4s ease;
-    cursor: pointer;
+}
+
+
+/* ================= RESPONSIVO MOBILE ================= */
+
+@media(max-width: 600px) {
+
+  .carousel-destaque,
+  .carousel-desconto {
+    height: 260px;
   }
-  
-  .card img{
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 10px;
+
+  .cardsel {
+    width: 160px;
+    height: 220px;
   }
-  
-  .card h3{
-    font-size: 1rem;
-    margin: .5rem 0;
+
+  .cardsel img {
+    height: 110px;
   }
-  
-  .old{
-    text-decoration: line-through;
-    color: #999;
+
+  .arrow {
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+  }
+
+  .arrow.left {
+    left: 8px;
+  }
+
+  .arrow.right {
+    right: 8px;
+  }
+}
+
+
+/* ================= MOBILE PEQUENO ================= */
+
+@media(max-width: 480px) {
+
+  .carousel-destaque,
+  .carousel-desconto {
+    height: 240px;
+  }
+
+  .cardsel {
+    width: 140px;
+    height: 200px;
+  }
+
+  .cardsel img {
+    height: 90px;
+  }
+
+  .cardsel h3 {
     font-size: .85rem;
   }
-  
-  .price{
-    color: #0a8;
-    font-size: 1.2rem;
-    font-weight: bold;
+
+  .cardsel .price {
+    font-size: .95rem;
   }
-  
-  /* Hoverzinho */
-  
-  .card:hover{
-    transform: scale(1.05);
+
+  .arrow {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
   }
-  
-  /* ================= SETAS ================= */
-  
-  .arrow{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #000;
-    color: #fff;
-    border: none;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1.4rem;
-    opacity: .7;
-    z-index: 10;
+
+  .arrow.left {
+    left: 5px;
   }
-  
-  .arrow:hover{
-    opacity: 1;
+
+  .arrow.right {
+    right: 5px;
   }
-  
-  .arrow.left{
-    left: -10px;
+}
+
+
+/* ================= HOVER SÓ DESKTOP ================= */
+
+@media(min-width: 768px) {
+  .arrow:hover {
+    width: 52px;
+    height: 52px;
+    font-size: 32px;
   }
-  
-  .arrow.right{
-    right: -10px;
-  }
-  
-  /* ================= RESPONSIVO ================= */
-  
-  /* Tablet */
-  
-  @media(max-width:900px){
-  
-    .carousel-wrapper{
-      max-width: 700px;
-    }
-  
-    .card{
-      width: 200px;
-      height: 300px;
-    }
-  }
-  
-  /* Mobile */
-  
-  @media(max-width:600px){
-  
-    .carousel{
-      height: 300px;
-    }
-  
-    .card{
-      width: 170px;
-      height: 260px;
-    }
-  
-    .arrow{
-      width: 36px;
-      height: 36px;
-    }
-  }
-  
+}
