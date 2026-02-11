@@ -31,18 +31,14 @@
     </header>
 
     <main class="container">
-      <!-- ================= FILTROS ================= -->
-      <!-- Botão que abre e fecha os filtros -->
+      <!-- FILTROS -->
       <section class="filtro-wrapper">
         <button id="toggleFiltros" class="btn-toggle-filtros" type="button">
           ▾ Exibir filtros
         </button>
 
-        <!-- Container que abre / fecha -->
         <div id="filtrosContainer" class="filtros fechado">
-          <!-- Form dos filtros -->
           <form class="grid filtros-form">
-            <!-- Filtro de ordenação por valor -->
             <label>
               Ordenar por valor
               <select id="filtroValor">
@@ -52,7 +48,6 @@
               </select>
             </label>
 
-            <!-- Filtro de disponibilidade -->
             <label>
               Disponibilidade
               <select id="filtroDisponivel">
@@ -62,12 +57,17 @@
               </select>
             </label>
 
-            <!-- Botões de ação -->
+            <label>
+              Promoções
+              <select id="filtroDesconto">
+                <option value="">Todos</option>
+                <option value="true">Somente com desconto</option>
+              </select>
+            </label>
+
             <div class="acoes-filtro">
-              <!-- Aplica filtros -->
               <button type="button" id="aplicarFiltros">Filtrar</button>
 
-              <!-- Reseta filtros -->
               <button type="button" id="resetFiltros" class="btn-reset">
                 Resetar
               </button>

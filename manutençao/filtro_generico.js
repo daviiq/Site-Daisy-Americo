@@ -1,18 +1,8 @@
 // ================= FILTRO – PARTE GENÉRICA =================
-// Este arquivo controla:
-// - abrir / fechar filtros
-// - botão Filtrar
-// - botão Resetar
-// - leitura dos selects
-// Ele NÃO sabe o que são quadros, canecas, etc.
-// Ele DEPENDE de:
-// - uma variável global chamada `dadosBase`
-// - uma função global chamada `renderizar()`
-
-// ================= ELEMENTOS =================
 
 const filtroValor = document.getElementById("filtroValor");
 const filtroDisponivel = document.getElementById("filtroDisponivel");
+const filtroDesconto = document.getElementById("filtroDesconto"); // NOVO
 
 const botaoFiltro = document.getElementById("aplicarFiltros");
 const botaoReset = document.getElementById("resetFiltros");
@@ -22,7 +12,6 @@ const filtrosContainer = document.getElementById("filtrosContainer");
 
 // ================= TOGGLE FILTROS =================
 
-// Abre / fecha o container de filtros
 toggleFiltros.addEventListener("click", () => {
   const aberto = filtrosContainer.classList.contains("aberto");
 
@@ -32,7 +21,6 @@ toggleFiltros.addEventListener("click", () => {
   toggleFiltros.textContent = aberto ? "▾ Exibir filtros" : "▴ Ocultar filtros";
 });
 
-// Fecha filtros (usado após filtrar ou resetar)
 function fecharFiltros() {
   filtrosContainer.classList.remove("aberto");
   filtrosContainer.classList.add("fechado");
@@ -42,12 +30,19 @@ function fecharFiltros() {
 // ================= APLICA FILTROS =================
 
 function aplicarFiltrosGenerico() {
-  let resultado = [...dadosBase]; // <- vem da página
+  let resultado = [...dadosBase];
 
-  // Filtro de disponibilidade
+  // Disponibilidade
   if (filtroDisponivel.value !== "") {
     const disponivel = filtroDisponivel.value === "true";
     resultado = resultado.filter((item) => item.disponivel === disponivel);
+  }
+
+  // 🔥 NOVO FILTRO DE DESCONTO
+  if (filtroDesconto.value === "true") {
+    resultado = resultado.filter(
+      (item) => item.desconto && item.desconto > 0
+    );
   }
 
   // Ordenação por valor
@@ -59,22 +54,19 @@ function aplicarFiltrosGenerico() {
     resultado.sort((a, b) => b.valor - a.valor);
   }
 
-  // Renderiza usando função da página
   renderizar(resultado);
-
   fecharFiltros();
 }
 
 // ================= EVENTOS =================
 
-// Botão Filtrar
 botaoFiltro.addEventListener("click", aplicarFiltrosGenerico);
 
-// Botão Resetar
 botaoReset.addEventListener("click", () => {
   filtroValor.value = "";
   filtroDisponivel.value = "";
+  filtroDesconto.value = ""; // NOVO
 
-  renderizar(dadosBase); // <- dados da página
+  renderizar(dadosBase);
   fecharFiltros();
 });
