@@ -54,6 +54,26 @@
   opacity: 0.75;
 }
 
+.preco-antigo {
+  text-decoration: line-through;
+  color: #8c1a03;
+  font-size: .85rem;
+  margin-bottom: 2px;
+}
+
+.preco-novo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #044708;
+}
+
+.preco-normal {
+  color: #471C02;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+
 @media (min-width: 768px) {
   .card-base {
     border-radius: 22px;

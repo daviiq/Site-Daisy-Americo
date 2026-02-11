@@ -33,7 +33,7 @@ const footerHTML = `
     <div>
       <h4>Site</h4>
       <p>Daisy Américo</p>
-      <p>Versão: <strong>v0.1.0.1 (Beta)</strong></p>
+      <p>Versão: <strong>v0.1.0.2 (Beta)</strong></p>
     </div>
 
     <div>

@@ -18,16 +18,32 @@ window.dadosBase = quadros;
 // ⚠️ CONTRATO COM O FILTRO GENÉRICO
 // O filtro chama diretamente essa função
 function renderizar(itensParaRenderizar) {
-  // Limpa o container
   lista.innerHTML = "";
 
-  // Cria os cards
   itensParaRenderizar.forEach((item) => {
     const card = document.createElement("article");
-    card.className = "card-base card-quadro";
+    card.className = "card-base card-outro";
+
+    const temDesconto = item.desconto && item.desconto > 0;
+
+    let precoHTML = "";
+
+    if (temDesconto) {
+      const valorComDesconto = item.valor - item.desconto;
+
+      precoHTML = `
+        <p class="preco-antigo">R$ ${item.valor}</p>
+        <p class="preco-novo">R$ ${valorComDesconto}</p>
+      `;
+    } else {
+      precoHTML = `
+        <p class="preco-normal">R$ ${item.valor}</p>
+      `;
+    }
 
     card.innerHTML = `
       <img src="${item.imagem}" alt="${item.nome}">
+
       <div class="conteudo">
         <h2>${item.nome}</h2>
 
@@ -35,11 +51,10 @@ function renderizar(itensParaRenderizar) {
           ${item.disponivel ? "Disponível" : "Indisponível"}
         </p>
 
-        <p><strong style="color: #471C02">R$ ${item.valor}</strong></p>
+        ${precoHTML}
       </div>
     `;
 
-    // Clique no card
     card.addEventListener("click", () => {
       window.location.href = `quadro.html?id=${item.id}`;
     });
