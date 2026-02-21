@@ -16,60 +16,45 @@ href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"/>
 
 <body>
 
-    <!-- VIDEO BACKGROUND -->
-<div class="video-bg">
-    <video autoplay muted loop playsinline>
-      <source src="../../assets/vid/video-404.mp4" type="video/mp4">
-    </video>
+<!-- ================= HEADER ================= -->
+<header style="padding-top: 1px; padding-bottom: 1px">
+  <div class="header-content">
+    <div class="brand">
+      <a href="../index.html">Daisy Américo</a>
+    </div>
+
+    <div class="header-location">ERRO 404</div>
+
+    <nav>
+      <a href="../obras.html">Obras</a>
+      <a href="../encomende.html">Encomendar</a>
+      <a href="../sobre.html">Sobre Mim</a>
+    </nav>
   </div>
-  
-    <!-- ================= HEADER ================= -->
-    <header style="padding-top: 1px; padding-bottom: 1px">
-        <div class="header-content">
-          <div class="brand">
-            <a href="../index.html">Daisy Américo</a>
-          </div>
-  
-          <!-- TEXTO DE LOCALIZAÇÃO -->
-          <div class="header-location">ERRO 404</div>
-  
-          <nav>
-            <a href="../obras.html">Obras</a>
-            <a href="../encomende.html">Encomendar</a>
-            <a href="../sobre.html">Sobre Mim</a>
-          </nav>
-        </div>
-      </header>
+</header>
 
 <main class="container">
 
+  <!-- IMAGEM 404 -->
+  <div class="error-image">
+      <img src="../../assets/vid/erro_404.gif" alt="Erro 404">
+    </div>
+
+  <!-- TEXTO -->
   <div class="error-wrapper">
-    <h1>404</h1>
     <h2>Página não encontrada</h2>
     <a href="../index.html">Voltar para a terra firme</a>
     <p>
-        <br>
-        Parece que essa página se perdeu no mar.
-        <br>
-        Talvez a maré tenha levado ou talvez nunca tenha ido ao mar.
-        <br><br>
-        Se for erro nosso, já estamos ajustando as velas.
-        <br>
-        Por enquanto, volte para terra firme.        
+      Parece que essa página se perdeu no mar.<br>
+      Talvez a maré tenha levado ou talvez nunca tenha ido ao mar.<br><br>
+      Se for erro nosso, já estamos ajustando as velas.<br>
+      Por enquanto, volte para terra firme.
     </p>
   </div>
 
 </main>
+
 <script src="../../manutençao/footer.js"></script>
-<script>
-    const videoBox = document.querySelector(".video-bg");
-    
-    window.addEventListener("scroll", () => {
-      const offset = window.scrollY * 0.20;
-      videoBox.style.transform =
-        `translate(-50%, ${offset}px)`;
-    });
-    </script>    
 
 </body>
 </html>
