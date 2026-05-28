@@ -148,7 +148,7 @@ const itens = [
     disponivel: true,
     destaque: false,
     desconto: 110,
-    imagem: "/assets/sobremim.jpeg",
+    imagem: "/assets/itens/Nossa Senhora Desatadora dos Nós.jpeg",
   },
   {
     id: 12,

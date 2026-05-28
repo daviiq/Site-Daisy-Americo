@@ -33,7 +33,7 @@ const footerHTML = `
     <div>
       <h4>Site</h4>
       <p>Daisy Américo</p>
-      <p>Versão: <strong>v0.1.0.3 (Beta)</strong></p>
+      <p>Versão: <strong>v0.1.0.4 (Beta)</strong></p>
     </div>
 
     <div>
@@ -50,7 +50,7 @@ const footerHTML = `
       <h4>Contato</h4>
       <p>
         <a href="https://wa.me/554888320641?text=Olá, Daisy" target="_blank">+55 (48) 98832-0641</a><br>
-        <a href="mailto:contato@exemplo.com" target="_blank">contato@exemplo.com</a>
+        <a href="mailto:galeriadaisyamericofotos@gmail.com" target="_blank">galeriadaisyamericofotos@gmail.com</a>
       </p>
     </div>
 

@@ -1,10 +1,5 @@
 /* ================= CONTEÚDO ================= */
 
-.header-location{
-  font-size: x-large;
-  font-family: 'Pacifico', cursive;
-}
-
 h1 {
   text-align: center;
   margin: 40px 0 20px;
@@ -32,6 +27,7 @@ h1 {
 /* imagem */
 .Inicio img {
   width: larger(300px, 25vw);
+  border-radius: 15px;
 }
 
 /* texto */
