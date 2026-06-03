@@ -40,29 +40,39 @@ header {
   height: 90px;
 }
 
-/* ================= HEADER LOCATION ================= */
-
-.header-location {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 18px;
-  color: #471C02;
-  white-space: nowrap;
-  pointer-events: none;
-  font-family: var(--font-ui);
-}
-
-/* ================= HEADER CONTENT ================= */
-
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 3rem;
   box-sizing: border-box;
+  width: 100%;
 }
+
+/* AGRUPA BRAND + LOCATION */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: nowrap;
+}
+
+/* ================= HEADER LOCATION ================= */
+
+.header-location {
+  font-size: 15px;
+  color: #471C02;
+  text-decoration: none;
+  white-space: nowrap;
+  font-family: var(--font-ui);
+  flex-shrink: 0;
+  max-width: 13ch;/* limita a ~13 caracteres */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ================= BRAND ================= */
 
 .brand a {
   font-size: 25px;
@@ -73,9 +83,12 @@ header {
   font-family: var(--font-ui);
 }
 
+/* ================= NAV ================= */
+
 nav {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
+  justify-content: flex-end;
 }
 
 nav a {
@@ -122,15 +135,15 @@ nav a:hover {
 
 @media (max-width: 1200px) {
   nav {
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   nav a {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .brand a {
-    font-size: 26px;
+    font-size: 24px;
   }
 }
 
@@ -146,17 +159,14 @@ nav a:hover {
     padding: 1rem 1.5rem;
   }
 
-  nav {
+  .header-left {
     width: 100%;
     justify-content: space-between;
   }
-}
 
-@media (max-width: 768px) {
-  .header-location {
-    left: 60%;
-    top: 27%;
-    transform: translate(-50%, -50%);
+  nav {
+    width: 100%;
+    justify-content: space-between;
   }
 }
 
