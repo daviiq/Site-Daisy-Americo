@@ -87,6 +87,10 @@
   margin: 4px 0;
   font-weight: 600;
   color: #333;
+  max-width: 15ch;/* limita a ~15caracteres */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .cardsel .old {
